@@ -36,8 +36,8 @@ $arguments = @(
 & $csc @arguments
 if ($LASTEXITCODE -ne 0) { throw "Build failed, exit code $LASTEXITCODE" }
 
-if (Test-Path (Join-Path $root 'README.md')) {
-    Copy-Item (Join-Path $root 'README.md') (Join-Path $dist 'README.txt') -Force
+if (Test-Path (Join-Path $root 'docs\QUICKSTART.txt')) {
+    Copy-Item (Join-Path $root 'docs\QUICKSTART.txt') (Join-Path $dist 'README.txt') -Force
 }
 
 Get-ChildItem $dist | Select-Object Name, Length
