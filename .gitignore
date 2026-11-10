@@ -1,0 +1,7 @@
+*.user
+*.suo
+.vs/
+bin/
+obj/
+*.log
+last_operation.log
